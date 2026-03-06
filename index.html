@@ -1,195 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Carrasco Martínez - Portfolio Robótica Social</title>
-
-    <!-- Tailwind CSS y FontAwesome -->
+    <title>Sara Carrasco | HRI & Robótica Social</title>
+    <!-- Si WordPress bloquea este script, algunos estilos pueden no verse, 
+         pero la línea de tiempo ya no se superpondrá -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        body { 
-            background-color: #0B1120 !important; 
-            color: #e2e8f0 !important; 
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-        ::selection { background-color: rgba(6, 182, 212, 0.3); }
-        .scrolled-nav { background-color: rgba(11, 17, 32, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; padding-top: 1rem !important; padding-bottom: 1rem !important; }
-        /* Ocultar barra de scroll para un look más app */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B1120; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        body { background-color: #0B1120; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
+        /* Pequeño ajuste para que los puntos mantengan su forma incluso en temas WP rebeldes */
+        .timeline-dot { min-width: 1rem; min-height: 1rem; }
     </style>
 </head>
-<body class="selection:bg-cyan-500/30">
+<body class="antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
 
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500" style="background-clip: text; -webkit-background-clip: text;">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 top-0 bg-[#0B1120]/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 tracking-tight">
                 SCM.
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
-                <a href="#experience" class="hover:text-cyan-400 transition-colors">Trayectoria</a>
-                <a href="#research" class="hover:text-cyan-400 transition-colors">Investigación</a>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#sobre-mi" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+                <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Trayectoria</a>
+                <a href="#investigacion" class="hover:text-cyan-400 transition-colors">Investigación</a>
                 <a href="#playground" class="hover:text-cyan-400 transition-colors">Laboratorio</a>
-                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contacto</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 z-10">
-                <div class="inline-flex items-center space-x-2 bg-slate-800/50 rounded-full px-4 py-2 border border-slate-700">
-                    <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    <span class="text-xs font-medium text-slate-300 uppercase tracking-wider">Investigadora Predoctoral @ UC3M</span>
+    <section id="sobre-mi" class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-cyan-900/20 to-purple-900/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/50 border border-slate-700 text-slate-300 text-xs font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                    INVESTIGADORA PREDOCTORAL @ UC3M
                 </div>
-                
-                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-white">
-                    Hola, soy <br/>
-                    <span class="text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600" style="background-clip: text; -webkit-background-clip: text;">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+                    Hola, soy <br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
                         Sara Carrasco
                     </span>
                 </h1>
-                
-                <p class="text-lg text-slate-400 max-w-lg leading-relaxed">
-                    Aplico estrategias de psicología social y teoría de juegos en <strong class="text-slate-200">robots sociales</strong> para aumentar el <i>bonding</i> y los tiempos de interacción. Desarrollando el futuro de la IA conversacional y el engagement.
+                <p class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed max-w-lg">
+                    Aplico estrategias psicológicas en <strong class="text-slate-200">robots sociales</strong> para aumentar el <em>bonding</em> y el <em>engagement</em>. Creando tecnología que nos entiende y conecta con nosotros.
                 </p>
-
-                <div class="flex space-x-4">
-                    <a href="#playground" class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold px-6 py-3 rounded-xl transition-all flex items-center space-x-2 group">
-                        <span>Ver Laboratorio</span>
-                        <i class="fa-solid fa-flask group-hover:rotate-12 transition-transform"></i>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#investigacion" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-[#0B1120] font-bold transition-all shadow-lg shadow-cyan-500/20">
+                        Ver Publicaciones
                     </a>
-                    <a href="#research" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-6 py-3 rounded-xl transition-all flex items-center space-x-2">
-                        <span>Publicaciones</span>
-                        <i class="fa-solid fa-book-open text-slate-400"></i>
+                    <a href="#contacto" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium border border-slate-700 transition-all">
+                        Contactar
                     </a>
                 </div>
             </div>
+            
+            <!-- Tags Decorativos -->
+            <div class="relative hidden md:block h-[400px]">
+                <div class="absolute top-10 right-10 bg-slate-800/80 backdrop-blur border border-slate-700 p-4 rounded-2xl transform rotate-6 hover:rotate-0 transition-transform shadow-xl">
+                    <div class="text-cyan-400 mb-2"><i class="fa-solid fa-robot text-2xl"></i></div>
+                    <div class="font-bold text-white text-sm">HRI</div>
+                    <div class="text-xs text-slate-400">Interacción Humano-Robot</div>
+                </div>
+                <div class="absolute top-40 left-10 bg-slate-800/80 backdrop-blur border border-slate-700 p-4 rounded-2xl transform -rotate-6 hover:rotate-0 transition-transform shadow-xl">
+                    <div class="text-purple-400 mb-2"><i class="fa-solid fa-brain text-2xl"></i></div>
+                    <div class="font-bold text-white text-sm">Cognición</div>
+                    <div class="text-xs text-slate-400">Teoría de Juegos & Psicología</div>
+                </div>
+                <div class="absolute bottom-10 right-20 bg-slate-800/80 backdrop-blur border border-slate-700 p-4 rounded-2xl transform rotate-3 hover:rotate-0 transition-transform shadow-xl">
+                    <div class="text-pink-400 mb-2"><i class="fa-solid fa-language text-2xl"></i></div>
+                    <div class="font-bold text-white text-sm">NLP adaptativo</div>
+                    <div class="text-xs text-slate-400">Few-shot Learning</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="flex justify-center lg:justify-end z-10">
-                <div id="btn-robot" class="relative group cursor-pointer transform transition-all hover:scale-110">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                    <div class="relative bg-slate-800 ring-1 ring-slate-700 p-8 rounded-full flex items-center justify-center h-32 w-32">
-                        <i id="robot-icon" class="fa-solid fa-robot text-5xl text-cyan-400 animate-pulse"></i>
+    <!-- Línea de Tiempo / Trayectoria (REESCRITA PARA WORDPRESS) -->
+    <section id="experiencia" class="py-24 relative bg-slate-900/30 border-t border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 flex items-center gap-3">
+                <i class="fa-solid fa-route text-cyan-400"></i> Trayectoria
+            </h2>
+
+            <!-- Contenedor Flex en lugar de Absoluto -->
+            <div class="flex flex-col">
+                
+                <!-- Item 1 -->
+                <div class="flex group">
+                    <!-- 1. Columna de Fecha (Izquierda) -->
+                    <div class="w-24 md:w-32 shrink-0 text-right pr-4 md:pr-6 pt-1">
+                        <span class="text-cyan-400 font-medium text-sm md:text-base">Actualidad</span>
                     </div>
-                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm text-cyan-300 font-mono">
-                        ¡Hazme clic!
+                    
+                    <!-- 2. Columna Central (Punto y Línea) -->
+                    <div class="flex flex-col items-center relative">
+                        <div class="timeline-dot w-4 h-4 rounded-full bg-cyan-500 border-[3px] border-[#0B1120] z-10 relative mt-1.5 transition-transform group-hover:scale-125"></div>
+                        <!-- La línea vertical -->
+                        <div class="w-[2px] h-full bg-slate-700 absolute top-4 bottom-0"></div>
+                    </div>
+                    
+                    <!-- 3. Columna de Contenido (Derecha) -->
+                    <div class="pl-4 md:pl-8 pb-14 w-full">
+                        <h3 class="text-xl font-bold text-white mb-1">Personal Investigador Predoctoral</h3>
+                        <p class="text-slate-400 text-sm mb-4">UC3M | Lab de Robótica Social</p>
+                        <p class="text-slate-300 leading-relaxed text-sm">Desarrollo de mi tesis y proyectos orientados a la generación de comportamientos en robots sociales. Trabajo activo en publicaciones de alto impacto y colaboración en el desarrollo cognitivo del Robot Social Mini.</p>
                     </div>
                 </div>
+
+                <!-- Item 2 -->
+                <div class="flex group">
+                    <div class="w-24 md:w-32 shrink-0 text-right pr-4 md:pr-6 pt-1">
+                        <span class="text-purple-400 font-medium text-sm md:text-base">2023</span>
+                    </div>
+                    <div class="flex flex-col items-center relative">
+                        <div class="timeline-dot w-4 h-4 rounded-full bg-slate-600 border-[3px] border-[#0B1120] z-10 relative mt-1.5 transition-transform group-hover:scale-125 group-hover:bg-purple-400"></div>
+                        <div class="w-[2px] h-full bg-slate-700 absolute top-4 bottom-0"></div>
+                    </div>
+                    <div class="pl-4 md:pl-8 pb-14 w-full">
+                        <h3 class="text-xl font-bold text-white mb-1">Máster Universitario (Ingeniería)</h3>
+                        <p class="text-slate-400 text-sm mb-4">Universidad Carlos III de Madrid (UC3M)</p>
+                        <p class="text-slate-300 leading-relaxed text-sm">Especialización en investigación aplicada a la robótica y la inteligencia artificial. Foco en la interacción humano-máquina y la generación del lenguaje natural adaptativo.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex group">
+                    <div class="w-24 md:w-32 shrink-0 text-right pr-4 md:pr-6 pt-1">
+                        <span class="text-slate-500 font-medium text-sm md:text-base">2020</span>
+                    </div>
+                    <div class="flex flex-col items-center relative">
+                        <div class="timeline-dot w-4 h-4 rounded-full bg-slate-600 border-[3px] border-[#0B1120] z-10 relative mt-1.5 transition-transform group-hover:scale-125 group-hover:bg-slate-400"></div>
+                        <!-- Sin línea debajo del último elemento -->
+                    </div>
+                    <div class="pl-4 md:pl-8 pb-4 w-full">
+                        <h3 class="text-xl font-bold text-white mb-1">Grado Universitario</h3>
+                        <p class="text-slate-400 text-sm mb-4">Proyecto: "Aplicación accesible de comunicación para robot social Mini"</p>
+                        <p class="text-slate-300 leading-relaxed text-sm">Inicio de mi inmersión en la robótica social desarrollando interfaces y sistemas que sentaron las bases de mi interés por la vinculación emocional humano-robot.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-900/50 border-t border-slate-800">
+    <!-- Investigación Section -->
+    <section id="investigacion" class="py-24 relative">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="md:col-span-1">
-                    <h2 class="text-3xl font-bold text-white mb-4">El Cerebro y la Máquina</h2>
-                    <div class="w-12 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded"></div>
-                </div>
-                <div class="md:col-span-2 space-y-6 text-slate-300 leading-relaxed text-lg">
-                    <p>Soy investigadora predoctoral en el <strong class="text-white">Departamento de Ingeniería de Sistemas y Automática</strong> de la Universidad Carlos III de Madrid (UC3M). Mi trabajo se centra en la intersección exacta entre el comportamiento humano, la inteligencia artificial y la robótica social.</p>
-                    <p>La robótica social se encuentra ante el reto de diseñar plataformas que no solo sean útiles, sino en las que la gente confíe y utilice con frecuencia. Mi objetivo es resolver el problema de la caída del interés (novelty effect) desarrollando <span class="text-cyan-400">estrategias cognitivas de alto grado de vinculación</span>, aplicadas principalmente al <strong>Robot Social Mini</strong>.</p>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 mt-16">
-                <div class="p-6 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center hover:border-purple-500/50 transition-colors">
-                    <i class="fa-solid fa-brain text-4xl text-purple-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Psicología Social</h3>
-                    <p class="text-slate-400 text-sm">Modelos cognitivos y conductuales aplicados a la interacción para fomentar el uso diario.</p>
-                </div>
-                <div class="p-6 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center hover:border-pink-500/50 transition-colors">
-                    <i class="fa-solid fa-heart-pulse text-4xl text-pink-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Bonding & Engagement</h3>
-                    <p class="text-slate-400 text-sm">Creación de vínculos emocionales sostenibles a largo plazo entre humanos y máquinas.</p>
-                </div>
-                <div class="p-6 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center hover:border-cyan-500/50 transition-colors">
-                    <i class="fa-solid fa-microchip text-4xl text-cyan-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Desarrollo HRI</h3>
-                    <p class="text-slate-400 text-sm">Implementación real en plataformas como el robot Mini, integrando aprendizaje cooperativo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience / Timeline Section -->
-    <section id="experience" class="py-20 relative border-t border-slate-800">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0B1120] to-slate-900/50 z-0"></div>
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4">Trayectoria Académica</h2>
-                <div class="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded mx-auto"></div>
-            </div>
-
-            <!-- Timeline Item 1 -->
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-                <div class="font-caveat font-medium text-2xl text-cyan-400 mb-1 sm:mb-0 sm:absolute left-0 top-7 w-24 sm:text-right">Actualidad</div>
-                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-28 before:h-full before:px-px before:bg-slate-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-28 after:w-3 after:h-3 after:bg-cyan-500 after:border-4 after:box-content after:border-[#0B1120] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                    <div class="text-xl font-bold text-slate-100">Personal Investigador Predoctoral</div>
-                </div>
-                <div class="text-slate-400 text-sm font-medium mb-3">UC3M | Lab de Robótica Social</div>
-                <div class="text-slate-300 text-sm leading-relaxed">
-                    Desarrollo de mi tesis y proyectos orientados a la generación de comportamientos complejos y empáticos para robots sociales. Trabajo activo en publicaciones de alto impacto y colaboración en el desarrollo del software cognitivo del Robot Social Mini.
-                </div>
-            </div>
-
-            <!-- Timeline Item 2 -->
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-                <div class="font-caveat font-medium text-2xl text-purple-400 mb-1 sm:mb-0 sm:absolute left-0 top-7 w-24 sm:text-right">2023</div>
-                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-28 before:h-full before:px-px before:bg-slate-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-28 after:w-3 after:h-3 after:bg-slate-600 group-hover:after:bg-purple-500 transition-colors after:border-4 after:box-content after:border-[#0B1120] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                    <div class="text-xl font-bold text-slate-100">Máster Universitario (Ingeniería)</div>
-                </div>
-                <div class="text-slate-400 text-sm font-medium mb-3">Universidad Carlos III de Madrid (UC3M)</div>
-                <div class="text-slate-300 text-sm leading-relaxed">
-                    Especialización en investigación aplicada a la robótica y la inteligencia artificial, centrando mis estudios empíricos en la interacción humano-máquina y la generación del lenguaje natural.
-                </div>
-            </div>
-
-            <!-- Timeline Item 3 -->
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-                <div class="font-caveat font-medium text-2xl text-slate-500 mb-1 sm:mb-0 sm:absolute left-0 top-7 w-24 sm:text-right">2020</div>
-                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-28 before:h-full before:px-px before:bg-slate-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-28 after:w-3 after:h-3 after:bg-slate-600 group-hover:after:bg-pink-500 transition-colors after:border-4 after:box-content after:border-[#0B1120] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                    <div class="text-xl font-bold text-slate-100">Grado Universitario</div>
-                </div>
-                <div class="text-slate-400 text-sm font-medium mb-3">Proyecto: "Aplicación accesible de comunicación para robot social Mini"</div>
-                <div class="text-slate-300 text-sm leading-relaxed">
-                    Inicio de mi inmersión en la robótica social desarrollando interfaces y sistemas de comunicación accesibles. Este trabajo sentó las bases de mi interés por la vinculación emocional con las máquinas.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research / Publications Section -->
-    <section id="research" class="py-24 bg-slate-900/30 border-t border-slate-800 relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div class="flex justify-between items-end mb-12">
                 <div>
-                    <h2 class="text-4xl font-bold text-white mb-4">Investigación Destacada</h2>
-                    <p class="text-slate-400 max-w-2xl text-lg">Publicaciones recientes en revistas científicas y congresos enfocadas en la vinculación emocional y robótica social.</p>
+                    <h2 class="text-3xl font-bold text-white mb-3">Publicaciones & Investigación</h2>
+                    <p class="text-slate-400">Selección de mis trabajos recientes en congresos y revistas.</p>
                 </div>
-                <a href="https://polipapers.upv.es/index.php/RIAI/article/view/18739" target="_blank" class="mt-4 md:mt-0 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-slate-700 rounded-xl font-medium flex items-center gap-2 group transition-all">
-                    Ver publicaciones online <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                <a href="https://orcid.org" target="_blank" class="hidden md:flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors">
+                    Ver ORCID <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-6">
                 <!-- Paper 1 -->
-                <div class="bg-[#0B1120] border border-slate-700 hover:border-cyan-500/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-900/20 group flex flex-col h-full">
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-cyan-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full">
                     <div class="flex items-center gap-3 mb-4">
                         <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Paper en Revista</span>
                         <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2024</span>
@@ -198,235 +173,53 @@
                     <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Propuesta para aplicar estrategias relacionadas con la psicología social y la teoría de juegos para desarrollar robots con alto grado de vinculación, produciendo tiempos de interacción más largos.</p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-slate-800">
                         <div class="text-xs text-slate-500 font-medium">RIAI Vol. 21(4)</div>
-                        <a href="https://polipapers.upv.es/index.php/RIAI/article/view/18739" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-cyan-500 hover:text-white transition-colors" title="Ver artículo"><i class="fa-solid fa-external-link-alt"></i></a>
+                        <a href="https://polipapers.upv.es/index.php/RIAI/article/view/18739" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-cyan-500 hover:text-white transition-colors"><i class="fa-solid fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <!-- Paper 2 -->
-                <div class="bg-[#0B1120] border border-slate-700 hover:border-purple-500/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/20 group flex flex-col h-full">
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-purple-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full">
                     <div class="flex items-center gap-3 mb-4">
                         <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">Congreso / Jornada</span>
                         <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2022</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Sistema de aprendizaje cooperativo para el robot social Mini</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Propuesta y desarrollo de una arquitectura de aprendizaje interactivo para mejorar la adaptabilidad del robot en tareas de asistencia domiciliaria.</p>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Propuesta y desarrollo de una arquitectura de aprendizaje interactivo para mejorar la adaptabilidad del robot en tareas de asistencia domiciliaria y evaluación de escenarios de convivencia.</p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-slate-800">
                         <div class="text-xs text-slate-500 font-medium">Jornadas Nacionales de Robótica</div>
                     </div>
                 </div>
                 
-                <!-- Paper 3 (Optional Full Width or inside grid) -->
-                <div class="bg-[#0B1120] border border-slate-700 hover:border-pink-500/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-pink-900/20 group md:col-span-2">
+                <!-- Paper 3 -->
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-pink-500/50 rounded-2xl p-8 transition-all duration-300 group md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-semibold rounded-full border border-pink-500/20">HRI & Lenguaje Natural</span>
+                        <span class="px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-semibold rounded-full border border-pink-500/20">HRI & NLP</span>
                         <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2023</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-300 transition-colors">Generación de lenguaje natural adaptativo en Robótica Social</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Aproximaciones desde el <em>Few-shot learning</em> aplicado a la generación de lenguaje natural y modelos conversacionales adaptativos. Trabajo centrado en la personalización de las interacciones verbales para la asistencia en casas particulares y residencias, buscando mitigar el <em>novelty effect</em>.
+                        Aproximaciones desde el <em>Few-shot learning</em> aplicado a la generación de lenguaje natural y modelos conversacionales adaptativos. Trabajo centrado en la personalización de las interacciones verbales para la asistencia en casas particulares, buscando mitigar el <em>novelty effect</em> a largo plazo.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Playground Section -->
-    <section id="playground" class="py-24 relative border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">Laboratorio Interactivo</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Un espacio experimental donde convierto mis papers en demos. Próximamente incluiré la interfaz visual de mis investigaciones sobre teoría de juegos en HRI.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Analizador IA -->
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 transition-all duration-300 flex flex-col h-full opacity-80">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-slate-700/50 rounded-lg text-cyan-400"><i class="fa-solid fa-comment-dots text-2xl"></i></div>
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-cyan-500/20 text-cyan-300 rounded-full border border-cyan-500/30">Próximamente</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Analizador de Engagement ✨</h3>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow">Basado en mis investigaciones sobre bonding: Introduce la frase de tu robot social y una IA experta en HRI evaluará su potencial emocional en tiempo real.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">Gemini LLM</span>
-                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">Cognición HRI</span>
-                    </div>
-                </div>
-
-                <!-- Simulador Teoria Juegos -->
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 transition-all duration-300 flex flex-col h-full opacity-80">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-slate-700/50 rounded-lg text-purple-400"><i class="fa-solid fa-gamepad text-2xl"></i></div>
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">Próximamente</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Simulador de Teoría de Juegos</h3>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow">Adaptación web de las mecánicas de cooperación humano-robot para medir niveles de confianza a través de decisiones interactivas.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">Gamificación</span>
-                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">Investigación</span>
-                    </div>
-                </div>
-
-                <!-- Add slot -->
-                <div class="bg-slate-800/20 border-2 border-dashed border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-slate-800/40 hover:border-slate-500 transition-all duration-300 group h-full min-h-[250px]">
-                    <div class="p-4 bg-slate-800 rounded-full text-slate-600 group-hover:text-slate-400 transition-colors mb-4"><i class="fa-solid fa-plus text-2xl"></i></div>
-                    <h3 class="text-lg font-bold text-slate-400 group-hover:text-slate-300 transition-colors">Nuevo Experimento</h3>
-                    <p class="text-slate-500 text-sm mt-2">Espacio reservado para futuras publicaciones e interfaces web.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer id="contact" class="bg-[#060913] py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0 text-center md:text-left">
-                <h3 class="text-2xl font-bold text-white mb-1">Sara Carrasco Martínez</h3>
-                <p class="text-slate-500 text-sm">Investigadora en Robótica Social @ UC3M</p>
+    <footer id="contacto" class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="text-2xl font-bold text-white mb-2 tracking-tight">SCM.</div>
+                <div class="text-sm text-slate-500">© 2024 Sara Carrasco. Investigadora HRI.</div>
             </div>
-            <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/in/sara-carrasco-martínez/" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors text-xl" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="text-slate-400 hover:text-white transition-colors text-xl" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:sara.carrasco.martinez@uc3m.es" class="text-slate-400 hover:text-purple-400 transition-colors text-xl" title="Email Académico"><i class="fa-solid fa-envelope"></i></a>
+            
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:tucorreo@uc3m.es" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-solid fa-envelope"></i></a>
             </div>
-        </div>
-        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-slate-800/50 text-center text-slate-600 text-sm">
-            <p>© <span id="year"></span> Sara Carrasco Martínez. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- MODAL ANALIZADOR ENGAGEMENT -->
-    <div id="analyzer-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-        <div class="bg-[#0B1120] border border-slate-700 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-cyan-900/20">
-            <div class="sticky top-0 bg-[#0B1120]/95 backdrop-blur-sm border-b border-slate-800 p-6 flex justify-between items-center z-10">
-                <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-purple-500/20 text-purple-400 rounded-lg"><i class="fa-solid fa-comment-dots text-xl"></i></div>
-                    <h2 class="text-2xl font-bold text-white">Analizador de Engagement ✨</h2>
-                </div>
-                <button id="btn-close-modal" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fa-solid fa-times"></i></button>
-            </div>
-            <div class="p-6 space-y-6">
-                <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">¿Qué frase emitirá tu robot social?</label>
-                    <textarea id="phrase-input" placeholder="Ej: Hola, he notado por tu tono de voz que hoy estás más decaído..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 min-h-[120px] resize-y"></textarea>
-                </div>
-                <button id="analyze-btn" disabled class="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-4 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center space-x-2">
-                    <i id="btn-icon" class="fa-solid fa-wand-magic-sparkles"></i>
-                    <span id="btn-text">Evaluar con IA ✨</span>
-                </button>
-                <div id="error-box" class="hidden p-4 bg-red-500/10 border border-red-500/20 text-red-400 rounded-xl text-sm"></div>
-                <div id="result-box" class="hidden space-y-6 animate-in fade-in duration-500">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
-                            <div class="text-sm text-slate-400 mb-1">Potencial de Bonding</div>
-                            <div class="flex items-end space-x-2"><span id="res-bonding" class="text-3xl font-bold text-pink-400">0</span><span class="text-slate-500 mb-1">/10</span></div>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-2 overflow-hidden"><div id="bar-bonding" class="bg-pink-400 h-full rounded-full transition-all duration-1000" style="width: 0%"></div></div>
-                        </div>
-                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
-                            <div class="text-sm text-slate-400 mb-1">Nivel de Engagement</div>
-                            <div class="flex items-end space-x-2"><span id="res-engagement" class="text-3xl font-bold text-cyan-400">0</span><span class="text-slate-500 mb-1">/10</span></div>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-2 overflow-hidden"><div id="bar-engagement" class="bg-cyan-400 h-full rounded-full transition-all duration-1000" style="width: 0%"></div></div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-800/30 p-5 rounded-xl border border-slate-700/50">
-                        <h3 class="text-lg font-semibold text-white mb-2 flex items-center space-x-2"><i class="fa-solid fa-brain text-purple-400"></i><span>Análisis Cognitivo/Social</span></h3>
-                        <p id="res-analysis" class="text-slate-300 text-sm leading-relaxed"></p>
-                    </div>
-                    <div class="bg-cyan-900/20 p-5 rounded-xl border border-cyan-800/50">
-                        <h3 class="text-lg font-semibold text-cyan-300 mb-2 flex items-center space-x-2"><i class="fa-solid fa-robot"></i><span>Iteración Mejorada ✨</span></h3>
-                        <p id="res-improved" class="text-cyan-100 italic"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const elYear = document.getElementById('year');
-            if(elYear) elYear.textContent = new Date().getFullYear();
-
-            const nav = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) { nav.classList.add('scrolled-nav'); nav.classList.remove('bg-transparent', 'py-6'); } 
-                else { nav.classList.remove('scrolled-nav'); nav.classList.add('bg-transparent', 'py-6'); }
-            });
-
-            const btnRobot = document.getElementById('btn-robot');
-            if(btnRobot) btnRobot.addEventListener('click', () => {
-                const icon = document.getElementById('robot-icon');
-                const moods = [{ class: 'fa-wand-magic-sparkles text-yellow-400 animate-bounce' }, { class: 'fa-heart text-pink-500 animate-ping' }, { class: 'fa-chart-line text-green-400 animate-spin' }];
-                const randomMood = moods[Math.floor(Math.random() * moods.length)];
-                icon.className = 'fa-solid text-5xl ' + randomMood.class;
-                setTimeout(() => { icon.className = 'fa-solid fa-robot text-5xl text-cyan-400 animate-pulse'; }, 3000);
-            });
-
-            const modal = document.getElementById('analyzer-modal');
-            const btnOpenModal = document.getElementById('btn-open-modal');
-            const btnCloseModal = document.getElementById('btn-close-modal');
-            const input = document.getElementById('phrase-input');
-            const btnAnalyze = document.getElementById('analyze-btn');
-            const errorBox = document.getElementById('error-box');
-            const resultBox = document.getElementById('result-box');
-
-            if(btnOpenModal) btnOpenModal.addEventListener('click', () => {
-                modal.classList.remove('hidden'); document.body.style.overflow = 'hidden';
-            });
-            if(btnCloseModal) btnCloseModal.addEventListener('click', () => {
-                modal.classList.add('hidden'); document.body.style.overflow = 'auto';
-            });
-            if(input) input.addEventListener('input', () => {
-                btnAnalyze.disabled = input.value.trim().length === 0;
-            });
-
-            if(btnAnalyze) btnAnalyze.addEventListener('click', async () => {
-                const phrase = input.value.trim();
-                if (!phrase) return;
-                btnAnalyze.disabled = true;
-                document.getElementById('btn-icon').className = 'fa-solid fa-spinner fa-spin';
-                document.getElementById('btn-text').textContent = 'Analizando patrones...';
-                errorBox.classList.add('hidden'); resultBox.classList.add('hidden');
-                
-                // --- ATENCIÓN SARA: AQUÍ VA TU CLAVE ---
-                const apiKey = ""; 
-                // ---------------------------------------
-
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-                const payload = {
-                    systemInstruction: { parts: [{ text: "Eres una IA experta en psicología cognitiva y robótica social. Tu objetivo es analizar la frase que un robot social le diría a un humano. Evalúa la frase basándote en su capacidad para generar 'bonding' (vínculo emocional) y 'engagement' (participación/atención activa). Sé analítico y académico." }] },
-                    contents: [{ parts: [{ text: `Analiza esta frase dicha por el robot: "${phrase}"` }] }],
-                    generationConfig: { responseMimeType: "application/json", responseSchema: { type: "OBJECT", properties: { bondingScore: { type: "INTEGER" }, engagementScore: { type: "INTEGER" }, psychologicalAnalysis: { type: "STRING" }, improvedPhrase: { type: "STRING" } }, required: ["bondingScore", "engagementScore", "psychologicalAnalysis", "improvedPhrase"] } }
-                };
-                
-                let success = false; let attempt = 0; const maxRetries = 5;
-                while (attempt < maxRetries && !success) {
-                    try {
-                        const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                        if (!response.ok) throw new Error('Network error');
-                        const data = await response.json();
-                        const textResult = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                        if (textResult) {
-                            const parsed = JSON.parse(textResult);
-                            document.getElementById('res-bonding').textContent = parsed.bondingScore;
-                            document.getElementById('bar-bonding').style.width = `${parsed.bondingScore * 10}%`;
-                            document.getElementById('res-engagement').textContent = parsed.engagementScore;
-                            document.getElementById('bar-engagement').style.width = `${parsed.engagementScore * 10}%`;
-                            document.getElementById('res-analysis').textContent = parsed.psychologicalAnalysis;
-                            document.getElementById('res-improved').textContent = `"${parsed.improvedPhrase}"`;
-                            resultBox.classList.remove('hidden'); success = true;
-                        } else { throw new Error('Invalid format'); }
-                    } catch (err) {
-                        attempt++;
-                        if (attempt >= maxRetries) { errorBox.textContent = "Error de conexión con la IA. Asegúrate de haber puesto tu API Key de Google válida."; errorBox.classList.remove('hidden'); } 
-                        else { await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt - 1))); }
-                    }
-                }
-                btnAnalyze.disabled = false;
-                document.getElementById('btn-icon').className = 'fa-solid fa-wand-magic-sparkles';
-                document.getElementById('btn-text').textContent = 'Evaluar con IA ✨';
-            });
-        });
-    </script>
 </body>
 </html>
