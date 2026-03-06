@@ -1,11 +1,22 @@
-<div id="wordpress-safe-wrapper" style="background-color: #0B1120 !important; color: #ffffff !important; min-height: 100vh; width: 100%; overflow-x: hidden; position: relative; padding-bottom: 2rem; font-family: sans-serif;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Carrasco - Portfolio Robótica Social</title>
 
     <!-- Tailwind CSS y FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        #portfolio-wrapper { background-color: #0B1120 !important; color: #e2e8f0 !important; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        body { 
+            background-color: #0B1120 !important; 
+            color: #e2e8f0 !important; 
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
         ::selection { background-color: rgba(6, 182, 212, 0.3); }
         .scrolled-nav { background-color: rgba(11, 17, 32, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; padding-top: 1rem !important; padding-bottom: 1rem !important; }
         /* Ocultar barra de scroll para un look más app */
@@ -14,8 +25,8 @@
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
-
-<div id="portfolio-wrapper" class="min-h-screen selection:bg-cyan-500/30">
+</head>
+<body class="selection:bg-cyan-500/30">
 
     <!-- Navbar -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
@@ -25,6 +36,7 @@
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
                 <a href="#about" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+                <a href="#experience" class="hover:text-cyan-400 transition-colors">Trayectoria</a>
                 <a href="#research" class="hover:text-cyan-400 transition-colors">Investigación</a>
                 <a href="#playground" class="hover:text-cyan-400 transition-colors">Laboratorio</a>
                 <a href="#contact" class="hover:text-cyan-400 transition-colors">Contacto</a>
@@ -67,7 +79,6 @@
             </div>
 
             <div class="flex justify-center lg:justify-end z-10">
-                <!-- Se eliminó el onclick para evitar el filtro KSES de WordPress -->
                 <div id="btn-robot" class="relative group cursor-pointer transform transition-all hover:scale-110">
                     <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                     <div class="relative bg-slate-800 ring-1 ring-slate-700 p-8 rounded-full flex items-center justify-center h-32 w-32">
@@ -82,7 +93,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800">
+    <section id="about" class="py-20 bg-slate-900/50 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="md:col-span-1">
@@ -115,8 +126,100 @@
         </div>
     </section>
 
+    <!-- Experience / Timeline Section -->
+    <section id="experience" class="py-20 relative border-t border-slate-800">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0B1120] to-slate-900/50 z-0"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Trayectoria</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded mx-auto"></div>
+            </div>
+
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-caveat font-medium text-2xl text-cyan-400 mb-1 sm:mb-0 sm:absolute left-0 top-7 w-24 sm:text-right">Actualidad</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-28 before:h-full before:px-px before:bg-slate-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-28 after:w-3 after:h-3 after:bg-cyan-500 after:border-4 after:box-content after:border-[#0B1120] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-slate-100">Investigadora Predoctoral</div>
+                </div>
+                <div class="text-slate-400 text-sm font-medium mb-3">Universidad Carlos III de Madrid (UC3M)</div>
+                <div class="text-slate-300 text-sm leading-relaxed">
+                    Desarrollo de mi tesis doctoral enfocada en la creación de vínculos socio-emocionales entre humanos y robots sociales. Diseño de experimentos, análisis estadístico de datos y programación de comportamientos robóticos basados en modelos psicológicos.
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-caveat font-medium text-2xl text-purple-400 mb-1 sm:mb-0 sm:absolute left-0 top-7 w-24 sm:text-right">2023</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-28 before:h-full before:px-px before:bg-slate-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-28 after:w-3 after:h-3 after:bg-slate-600 group-hover:after:bg-purple-500 transition-colors after:border-4 after:box-content after:border-[#0B1120] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-slate-100">Máster Universitario</div>
+                </div>
+                <div class="text-slate-400 text-sm font-medium mb-3">Universidad Carlos III de Madrid (UC3M)</div>
+                <div class="text-slate-300 text-sm leading-relaxed">
+                    Especialización en investigación aplicada, metodologías cuantitativas y cualitativas, y diseño de estudios empíricos para la interacción humano-máquina.
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-caveat font-medium text-2xl text-slate-500 mb-1 sm:mb-0 sm:absolute left-0 top-7 w-24 sm:text-right">2021</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-28 before:h-full before:px-px before:bg-slate-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-28 after:w-3 after:h-3 after:bg-slate-600 group-hover:after:bg-pink-500 transition-colors after:border-4 after:box-content after:border-[#0B1120] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-slate-100">Grado en Psicología</div>
+                </div>
+                <div class="text-slate-400 text-sm font-medium mb-3">Universidad Complutense / Autónoma</div>
+                <div class="text-slate-300 text-sm leading-relaxed">
+                    Formación base en procesos cognitivos, psicología social y del comportamiento, que hoy aplico directamente a la programación y diseño de interfaces robóticas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research / Publications Section -->
+    <section id="research" class="py-24 bg-slate-900/30 border-t border-slate-800 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-white mb-4">Investigación</h2>
+                    <p class="text-slate-400 max-w-2xl text-lg">Proyectos académicos, papers y conferencias sobre la integración de la psicología en la robótica.</p>
+                </div>
+                <a href="#" class="mt-4 md:mt-0 text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-2 group">
+                    Ver en Google Scholar <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Paper 1 -->
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-cyan-500/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-900/20 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Paper</span>
+                        <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Estrategias de Bonding a largo plazo en Robots Asistenciales</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Estudio longitudinal que evalúa cómo diferentes patrones de diálogo empático afectan a la confianza del usuario durante 4 semanas de interacción con una plataforma robótica.</p>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="text-xs text-slate-500">Congreso HRI 2024</div>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-cyan-500 hover:text-white transition-colors"><i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-purple-500/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/20 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">Conferencia</span>
+                        <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Mid-term Engagement: Retención en IA conversacional</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Presentación sobre la caída del interés (novelty effect) en interacciones con agentes conversacionales y cómo mitigarlo mediante técnicas de refuerzo psicológico adaptativo.</p>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="text-xs text-slate-500">Simposio Robótica UC3M</div>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-purple-500 hover:text-white transition-colors"><i class="fa-solid fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Playground Section -->
-    <section id="playground" class="py-24 relative">
+    <section id="playground" class="py-24 relative border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">Laboratorio Interactivo</h2>
@@ -137,7 +240,6 @@
                     </div>
                 </div>
 
-                <!-- Se eliminó el onclick -->
                 <div id="btn-open-modal" class="cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 transition-all duration-300 flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1 group">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 bg-slate-700/50 rounded-lg text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-transform"><i class="fa-solid fa-comment-dots text-2xl"></i></div>
@@ -191,10 +293,8 @@
             <div class="p-6 space-y-6">
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">¿Qué frase emitirá tu robot social?</label>
-                    <!-- Se eliminó oninput -->
                     <textarea id="phrase-input" placeholder="Ej: Hola, he notado por tu tono de voz que hoy estás más decaído..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 min-h-[120px] resize-y"></textarea>
                 </div>
-                <!-- Se eliminó onclick -->
                 <button id="analyze-btn" disabled class="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-4 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center space-x-2">
                     <i id="btn-icon" class="fa-solid fa-wand-magic-sparkles"></i>
                     <span id="btn-text">Evaluar con IA ✨</span>
@@ -273,7 +373,10 @@
                 document.getElementById('btn-text').textContent = 'Analizando patrones...';
                 errorBox.classList.add('hidden'); resultBox.classList.add('hidden');
                 
+                // --- ATENCIÓN SARA: AQUÍ VA TU CLAVE ---
                 const apiKey = ""; 
+                // ---------------------------------------
+
                 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
                 const payload = {
                     systemInstruction: { parts: [{ text: "Eres una IA experta en psicología cognitiva y robótica social. Tu objetivo es analizar la frase que un robot social le diría a un humano. Evalúa la frase basándote en su capacidad para generar 'bonding' (vínculo emocional) y 'engagement' (participación/atención activa). Sé analítico y académico." }] },
@@ -300,7 +403,7 @@
                         } else { throw new Error('Invalid format'); }
                     } catch (err) {
                         attempt++;
-                        if (attempt >= maxRetries) { errorBox.textContent = "Error de conexión con la IA. Inténtalo más tarde."; errorBox.classList.remove('hidden'); } 
+                        if (attempt >= maxRetries) { errorBox.textContent = "Error de conexión con la IA. Asegúrate de haber puesto tu API Key de Google válida."; errorBox.classList.remove('hidden'); } 
                         else { await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt - 1))); }
                     }
                 }
@@ -310,5 +413,5 @@
             });
         });
     </script>
-</div>
-</div>
+</body>
+</html>
