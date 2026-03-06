@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sara Carrasco | HRI & Robótica Social</title>
-    <!-- Si WordPress bloquea este script, algunos estilos pueden no verse, 
-         pero la línea de tiempo ya no se superpondrá -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background-color: #0B1120; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
-        /* Pequeño ajuste para que los puntos mantengan su forma incluso en temas WP rebeldes */
         .timeline-dot { min-width: 1rem; min-height: 1rem; }
     </style>
 </head>
@@ -22,11 +19,12 @@
             <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 tracking-tight">
                 SCM.
             </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+            <div class="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-slate-300">
                 <a href="#sobre-mi" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+                <a href="#pilares" class="hover:text-cyan-400 transition-colors">Enfoque</a>
                 <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Trayectoria</a>
                 <a href="#investigacion" class="hover:text-cyan-400 transition-colors">Investigación</a>
-                <a href="#playground" class="hover:text-cyan-400 transition-colors">Laboratorio</a>
+                <a href="#laboratorio" class="hover:text-cyan-400 transition-colors">Laboratorio</a>
             </div>
         </div>
     </nav>
@@ -51,8 +49,8 @@
                     Aplico estrategias psicológicas en <strong class="text-slate-200">robots sociales</strong> para aumentar el <em>bonding</em> y el <em>engagement</em>. Creando tecnología que nos entiende y conecta con nosotros.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#investigacion" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-[#0B1120] font-bold transition-all shadow-lg shadow-cyan-500/20">
-                        Ver Publicaciones
+                    <a href="#laboratorio" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-[#0B1120] font-bold transition-all shadow-lg shadow-cyan-500/20">
+                        Ver Proyectos
                     </a>
                     <a href="#contacto" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium border border-slate-700 transition-all">
                         Contactar
@@ -60,36 +58,68 @@
                 </div>
             </div>
             
-            <!-- Tags Decorativos -->
-            <div class="relative hidden md:block h-[400px]">
-                <div class="absolute top-10 right-10 bg-slate-800/80 backdrop-blur border border-slate-700 p-4 rounded-2xl transform rotate-6 hover:rotate-0 transition-transform shadow-xl">
-                    <div class="text-cyan-400 mb-2"><i class="fa-solid fa-robot text-2xl"></i></div>
-                    <div class="font-bold text-white text-sm">HRI</div>
-                    <div class="text-xs text-slate-400">Interacción Humano-Robot</div>
+            <!-- Robot Interactivo Estático (Decorativo) -->
+            <div class="hidden md:flex justify-center lg:justify-end relative">
+                <div class="relative group transform transition-all hover:scale-105 duration-500">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-slate-800 ring-1 ring-slate-700 p-12 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fa-solid fa-robot text-7xl text-cyan-400 animate-pulse"></i>
+                    </div>
+                    <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm text-cyan-300 font-mono">
+                        HRI en desarrollo...
+                    </div>
                 </div>
-                <div class="absolute top-40 left-10 bg-slate-800/80 backdrop-blur border border-slate-700 p-4 rounded-2xl transform -rotate-6 hover:rotate-0 transition-transform shadow-xl">
-                    <div class="text-purple-400 mb-2"><i class="fa-solid fa-brain text-2xl"></i></div>
-                    <div class="font-bold text-white text-sm">Cognición</div>
-                    <div class="text-xs text-slate-400">Teoría de Juegos & Psicología</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares / About Section -->
+    <section id="pilares" class="py-20 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold text-white mb-4">El Cerebro y la Máquina</h2>
+                    <div class="w-12 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded"></div>
                 </div>
-                <div class="absolute bottom-10 right-20 bg-slate-800/80 backdrop-blur border border-slate-700 p-4 rounded-2xl transform rotate-3 hover:rotate-0 transition-transform shadow-xl">
-                    <div class="text-pink-400 mb-2"><i class="fa-solid fa-language text-2xl"></i></div>
-                    <div class="font-bold text-white text-sm">NLP adaptativo</div>
-                    <div class="text-xs text-slate-400">Few-shot Learning</div>
+                <div class="md:col-span-2 space-y-6 text-slate-300 leading-relaxed text-lg">
+                    <p>
+                        Soy investigadora predoctoral en la <strong class="text-white">Universidad Carlos III de Madrid (UC3M)</strong>. Mi trabajo se centra en el punto exacto donde la psicología humana se encuentra con la inteligencia artificial y la robótica.
+                    </p>
+                    <p>
+                        No basta con que un robot funcione; necesitamos que <span class="text-cyan-400 font-semibold">conecte</span>. A través del estudio del comportamiento humano, diseño estrategias para que los robots sociales generen confianza, empatía y vínculos a largo plazo (bonding) con las personas con las que interactúan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Core Pillars -->
+            <div class="grid md:grid-cols-3 gap-6 mt-16">
+                <div class="p-8 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center hover:border-purple-500/50 transition-colors group">
+                    <i class="fa-solid fa-brain text-4xl text-purple-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Psicología</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Modelos cognitivos y conductuales aplicados a la interacción para entender el comportamiento humano.</p>
+                </div>
+                <div class="p-8 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center hover:border-pink-500/50 transition-colors group">
+                    <i class="fa-solid fa-heart text-4xl text-pink-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Bonding</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Creación de vínculos emocionales sostenibles y mitigación del "novelty effect" a largo plazo.</p>
+                </div>
+                <div class="p-8 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center hover:border-cyan-500/50 transition-colors group">
+                    <i class="fa-solid fa-robot text-4xl text-cyan-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Robótica Social</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Implementación real en plataformas robóticas para medir el engagement de forma cuantitativa.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Línea de Tiempo / Trayectoria -->
-    <section id="experiencia" class="py-24 relative bg-slate-900/30 border-t border-b border-slate-800">
+    <section id="experiencia" class="py-24 relative">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-white mb-16 flex items-center gap-3">
                 <i class="fa-solid fa-route text-cyan-400"></i> Trayectoria
             </h2>
 
             <div class="flex flex-col">
-                
                 <!-- Item 1 -->
                 <div class="flex group">
                     <div class="w-24 md:w-32 shrink-0 text-right pr-4 md:pr-6 pt-1">
@@ -136,13 +166,12 @@
                         <p class="text-slate-300 leading-relaxed text-sm">Inicio de mi inmersión en la robótica social desarrollando interfaces y sistemas que sentaron las bases de mi interés por la vinculación emocional humano-robot.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Investigación Section -->
-    <section id="investigacion" class="py-24 relative">
+    <section id="investigacion" class="py-24 relative bg-slate-900/30 border-y border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex justify-between items-end mb-12">
                 <div>
@@ -181,17 +210,64 @@
                         <div class="text-xs text-slate-500 font-medium">Jornadas Nacionales de Robótica</div>
                     </div>
                 </div>
-                
-                <!-- Paper 3 -->
-                <div class="bg-[#0B1120] border border-slate-700 hover:border-pink-500/50 rounded-2xl p-8 transition-all duration-300 group md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-semibold rounded-full border border-pink-500/20">HRI & NLP</span>
-                        <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2023</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laboratorio / Playground Section -->
+    <section id="laboratorio" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Laboratorio Interactivo</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                    Un espacio de experimentación donde alojo aplicaciones web y demos interactivas para poner a prueba estrategias de engagement en tiempo real.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- App Card 1 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-gamepad text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
+                            En desarrollo
+                        </span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-300 transition-colors">Generación de lenguaje natural adaptativo en Robótica Social</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Aproximaciones desde el <em>Few-shot learning</em> aplicado a la generación de lenguaje natural y modelos conversacionales adaptativos. Trabajo centrado en la personalización de las interacciones verbales para la asistencia en casas particulares, buscando mitigar el <em>novelty effect</em> a largo plazo.
-                    </p>
+                    <h3 class="text-xl font-bold text-white mb-3">Tamagotchi Social</h3>
+                    <p class="text-slate-400 text-sm mb-8 flex-grow leading-relaxed">Una mascota virtual experimental diseñada para probar estrategias de retención, cuidado y creación de hábitos (engagement) en usuarios mediante refuerzo psicológico.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-3 py-1.5 rounded-md">Psicología Conductual</span>
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-3 py-1.5 rounded-md">Gamificación</span>
+                    </div>
+                </div>
+
+                <!-- App Card 2 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 cursor-not-allowed">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-purple-400 group-hover:text-purple-300 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-message text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-green-500/20 text-green-300 rounded-full border border-green-500/30">
+                            Activo
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Analizador de Engagement ✨</h3>
+                    <p class="text-slate-400 text-sm mb-8 flex-grow leading-relaxed">Introduce las frases de tu robot social y una IA experta en psicología evaluará su nivel de bonding y engagement en tiempo real.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-3 py-1.5 rounded-md">IA Cognitiva</span>
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-3 py-1.5 rounded-md">LLMs</span>
+                    </div>
+                </div>
+
+                <!-- App Card 3 (Placeholder) -->
+                <div class="bg-slate-800/20 border-2 border-dashed border-slate-700 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/40 hover:border-cyan-500/50 transition-all duration-300 group h-full min-h-[300px]">
+                    <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center text-slate-500 group-hover:text-cyan-400 transition-colors mb-4">
+                        <i class="fa-solid fa-terminal text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-300 group-hover:text-white transition-colors">Añadir Aplicación</h3>
+                    <p class="text-slate-500 text-sm mt-2 max-w-[200px]">Espacio reservado para futuros experimentos interactivos.</p>
                 </div>
             </div>
         </div>
@@ -208,7 +284,7 @@
             <div class="flex gap-4">
                 <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <!-- El correo electrónico se ha actualizado aquí -->
+                <!-- Correo electrónico correcto -->
                 <a href="mailto:sacarras@ing.uc3m.es" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
