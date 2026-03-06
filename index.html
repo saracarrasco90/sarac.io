@@ -1,0 +1,314 @@
+<div id="wordpress-safe-wrapper" style="background-color: #0B1120 !important; color: #ffffff !important; min-height: 100vh; width: 100%; overflow-x: hidden; position: relative; padding-bottom: 2rem; font-family: sans-serif;">
+
+    <!-- Tailwind CSS y FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        #portfolio-wrapper { background-color: #0B1120 !important; color: #e2e8f0 !important; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        ::selection { background-color: rgba(6, 182, 212, 0.3); }
+        .scrolled-nav { background-color: rgba(11, 17, 32, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #1e293b; padding-top: 1rem !important; padding-bottom: 1rem !important; }
+        /* Ocultar barra de scroll para un look más app */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B1120; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+
+<div id="portfolio-wrapper" class="min-h-screen selection:bg-cyan-500/30">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500" style="background-clip: text; -webkit-background-clip: text;">
+                SCM.
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+                <a href="#research" class="hover:text-cyan-400 transition-colors">Investigación</a>
+                <a href="#playground" class="hover:text-cyan-400 transition-colors">Laboratorio</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 z-10">
+                <div class="inline-flex items-center space-x-2 bg-slate-800/50 rounded-full px-4 py-2 border border-slate-700">
+                    <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-xs font-medium text-slate-300 uppercase tracking-wider">Investigadora Predoctoral @ UC3M</span>
+                </div>
+                
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-white">
+                    Hola, soy <br/>
+                    <span class="text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600" style="background-clip: text; -webkit-background-clip: text;">
+                        Sara Carrasco
+                    </span>
+                </h1>
+                
+                <p class="text-lg text-slate-400 max-w-lg leading-relaxed">
+                    Aplico estrategias psicológicas en <strong class="text-slate-200">robots sociales</strong> para aumentar el <i>bonding</i> y el <i>engagement</i>. Creando tecnología que nos entiende y conecta con nosotros.
+                </p>
+
+                <div class="flex space-x-4">
+                    <a href="#playground" class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold px-6 py-3 rounded-xl transition-all flex items-center space-x-2 group">
+                        <span>Ver Proyectos</span>
+                        <i class="fa-solid fa-chevron-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-6 py-3 rounded-xl transition-all">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center lg:justify-end z-10">
+                <!-- Se eliminó el onclick para evitar el filtro KSES de WordPress -->
+                <div id="btn-robot" class="relative group cursor-pointer transform transition-all hover:scale-110">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-slate-800 ring-1 ring-slate-700 p-8 rounded-full flex items-center justify-center h-32 w-32">
+                        <i id="robot-icon" class="fa-solid fa-robot text-5xl text-cyan-400 animate-pulse"></i>
+                    </div>
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm text-cyan-300 font-mono">
+                        ¡Hazme clic!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold text-white mb-4">El Cerebro y la Máquina</h2>
+                    <div class="w-12 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded"></div>
+                </div>
+                <div class="md:col-span-2 space-y-6 text-slate-300 leading-relaxed text-lg">
+                    <p>Soy investigadora predoctoral en la <strong class="text-white">Universidad Carlos III de Madrid (UC3M)</strong>. Mi trabajo se centra en el punto exacto donde la psicología humana se encuentra con la inteligencia artificial y la robótica.</p>
+                    <p>No basta con que un robot funcione; necesitamos que <span class="text-cyan-400">conecte</span>. A través del estudio del comportamiento humano, diseño estrategias para que los robots sociales generen confianza, empatía y vínculos a largo plazo (bonding) con las personas con las que interactúan.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mt-16">
+                <div class="p-6 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center">
+                    <i class="fa-solid fa-brain text-4xl text-purple-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Psicología</h3>
+                    <p class="text-slate-400 text-sm">Modelos cognitivos y conductuales aplicados a la interacción.</p>
+                </div>
+                <div class="p-6 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center">
+                    <i class="fa-solid fa-heart text-4xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Bonding</h3>
+                    <p class="text-slate-400 text-sm">Creación de vínculos emocionales sostenibles entre humanos y máquinas.</p>
+                </div>
+                <div class="p-6 bg-[#0B1120] rounded-2xl border border-slate-800 flex flex-col items-center text-center">
+                    <i class="fa-solid fa-robot text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Robótica Social</h3>
+                    <p class="text-slate-400 text-sm">Implementación real en plataformas robóticas para medir el engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playground Section -->
+    <section id="playground" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Laboratorio Interactivo</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Un espacio de experimentación donde alojo aplicaciones web y demos interactivas para poner a prueba estrategias de engagement en tiempo real.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 transition-all duration-300 flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-slate-700/50 rounded-lg text-cyan-400"><i class="fa-solid fa-gamepad text-2xl"></i></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">En desarrollo</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Tamagotchi Social</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Una mascota virtual experimental diseñada para probar estrategias de retención, cuidado y creación de hábitos en usuarios mediante refuerzo psicológico.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">React</span>
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">Psicología</span>
+                    </div>
+                </div>
+
+                <!-- Se eliminó el onclick -->
+                <div id="btn-open-modal" class="cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 transition-all duration-300 flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-slate-700/50 rounded-lg text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-transform"><i class="fa-solid fa-comment-dots text-2xl"></i></div>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/20 text-green-300 rounded-full border border-green-500/30">Activo</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Analizador de Engagement ✨</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Introduce las frases de tu robot social y una IA experta en psicología evaluará su nivel de bonding y engagement en tiempo real.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">IA Cognitiva</span>
+                        <span class="text-xs text-slate-300 bg-slate-700/50 px-2 py-1 rounded-md">Gemini API</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/20 border-2 border-dashed border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-slate-800/40 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer group h-full min-h-[250px]">
+                    <div class="p-4 bg-slate-800 rounded-full text-slate-500 group-hover:text-cyan-400 transition-colors mb-4"><i class="fa-solid fa-terminal text-3xl"></i></div>
+                    <h3 class="text-lg font-bold text-slate-300 group-hover:text-white transition-colors">Añadir Aplicación</h3>
+                    <p class="text-slate-500 text-sm mt-2">Espacio reservado para futuros experimentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#060913] py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h3 class="text-2xl font-bold text-white mb-1">Sara Carrasco Martínez</h3>
+                <p class="text-slate-500 text-sm">Robótica Social & Psicología @ UC3M</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:tu-email@uc3m.es" class="text-slate-400 hover:text-purple-400 transition-colors text-xl"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-slate-800/50 text-center text-slate-600 text-sm">
+            <p>© <span id="year"></span> Sara Carrasco Martínez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL ANALIZADOR ENGAGEMENT -->
+    <div id="analyzer-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+        <div class="bg-[#0B1120] border border-slate-700 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-cyan-900/20">
+            <div class="sticky top-0 bg-[#0B1120]/95 backdrop-blur-sm border-b border-slate-800 p-6 flex justify-between items-center z-10">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-purple-500/20 text-purple-400 rounded-lg"><i class="fa-solid fa-comment-dots text-xl"></i></div>
+                    <h2 class="text-2xl font-bold text-white">Analizador de Engagement ✨</h2>
+                </div>
+                <button id="btn-close-modal" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="p-6 space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">¿Qué frase emitirá tu robot social?</label>
+                    <!-- Se eliminó oninput -->
+                    <textarea id="phrase-input" placeholder="Ej: Hola, he notado por tu tono de voz que hoy estás más decaído..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 min-h-[120px] resize-y"></textarea>
+                </div>
+                <!-- Se eliminó onclick -->
+                <button id="analyze-btn" disabled class="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-4 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center space-x-2">
+                    <i id="btn-icon" class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span id="btn-text">Evaluar con IA ✨</span>
+                </button>
+                <div id="error-box" class="hidden p-4 bg-red-500/10 border border-red-500/20 text-red-400 rounded-xl text-sm"></div>
+                <div id="result-box" class="hidden space-y-6 animate-in fade-in duration-500">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
+                            <div class="text-sm text-slate-400 mb-1">Potencial de Bonding</div>
+                            <div class="flex items-end space-x-2"><span id="res-bonding" class="text-3xl font-bold text-pink-400">0</span><span class="text-slate-500 mb-1">/10</span></div>
+                            <div class="w-full bg-slate-700 h-2 rounded-full mt-2 overflow-hidden"><div id="bar-bonding" class="bg-pink-400 h-full rounded-full transition-all duration-1000" style="width: 0%"></div></div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
+                            <div class="text-sm text-slate-400 mb-1">Nivel de Engagement</div>
+                            <div class="flex items-end space-x-2"><span id="res-engagement" class="text-3xl font-bold text-cyan-400">0</span><span class="text-slate-500 mb-1">/10</span></div>
+                            <div class="w-full bg-slate-700 h-2 rounded-full mt-2 overflow-hidden"><div id="bar-engagement" class="bg-cyan-400 h-full rounded-full transition-all duration-1000" style="width: 0%"></div></div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                        <h3 class="text-lg font-semibold text-white mb-2 flex items-center space-x-2"><i class="fa-solid fa-brain text-purple-400"></i><span>Análisis Cognitivo/Social</span></h3>
+                        <p id="res-analysis" class="text-slate-300 text-sm leading-relaxed"></p>
+                    </div>
+                    <div class="bg-cyan-900/20 p-5 rounded-xl border border-cyan-800/50">
+                        <h3 class="text-lg font-semibold text-cyan-300 mb-2 flex items-center space-x-2"><i class="fa-solid fa-robot"></i><span>Iteración Mejorada ✨</span></h3>
+                        <p id="res-improved" class="text-cyan-100 italic"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts unificados y protegidos sin dependencias en atributos HTML -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elYear = document.getElementById('year');
+            if(elYear) elYear.textContent = new Date().getFullYear();
+
+            const nav = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { nav.classList.add('scrolled-nav'); nav.classList.remove('bg-transparent', 'py-6'); } 
+                else { nav.classList.remove('scrolled-nav'); nav.classList.add('bg-transparent', 'py-6'); }
+            });
+
+            const btnRobot = document.getElementById('btn-robot');
+            if(btnRobot) btnRobot.addEventListener('click', () => {
+                const icon = document.getElementById('robot-icon');
+                const moods = [{ class: 'fa-wand-magic-sparkles text-yellow-400 animate-bounce' }, { class: 'fa-heart text-pink-500 animate-ping' }, { class: 'fa-chart-line text-green-400 animate-spin' }];
+                const randomMood = moods[Math.floor(Math.random() * moods.length)];
+                icon.className = 'fa-solid text-5xl ' + randomMood.class;
+                setTimeout(() => { icon.className = 'fa-solid fa-robot text-5xl text-cyan-400 animate-pulse'; }, 3000);
+            });
+
+            const modal = document.getElementById('analyzer-modal');
+            const btnOpenModal = document.getElementById('btn-open-modal');
+            const btnCloseModal = document.getElementById('btn-close-modal');
+            const input = document.getElementById('phrase-input');
+            const btnAnalyze = document.getElementById('analyze-btn');
+            const errorBox = document.getElementById('error-box');
+            const resultBox = document.getElementById('result-box');
+
+            if(btnOpenModal) btnOpenModal.addEventListener('click', () => {
+                modal.classList.remove('hidden'); document.body.style.overflow = 'hidden';
+            });
+            if(btnCloseModal) btnCloseModal.addEventListener('click', () => {
+                modal.classList.add('hidden'); document.body.style.overflow = 'auto';
+            });
+            if(input) input.addEventListener('input', () => {
+                btnAnalyze.disabled = input.value.trim().length === 0;
+            });
+
+            if(btnAnalyze) btnAnalyze.addEventListener('click', async () => {
+                const phrase = input.value.trim();
+                if (!phrase) return;
+                btnAnalyze.disabled = true;
+                document.getElementById('btn-icon').className = 'fa-solid fa-spinner fa-spin';
+                document.getElementById('btn-text').textContent = 'Analizando patrones...';
+                errorBox.classList.add('hidden'); resultBox.classList.add('hidden');
+                
+                const apiKey = ""; 
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+                const payload = {
+                    systemInstruction: { parts: [{ text: "Eres una IA experta en psicología cognitiva y robótica social. Tu objetivo es analizar la frase que un robot social le diría a un humano. Evalúa la frase basándote en su capacidad para generar 'bonding' (vínculo emocional) y 'engagement' (participación/atención activa). Sé analítico y académico." }] },
+                    contents: [{ parts: [{ text: `Analiza esta frase dicha por el robot: "${phrase}"` }] }],
+                    generationConfig: { responseMimeType: "application/json", responseSchema: { type: "OBJECT", properties: { bondingScore: { type: "INTEGER" }, engagementScore: { type: "INTEGER" }, psychologicalAnalysis: { type: "STRING" }, improvedPhrase: { type: "STRING" } }, required: ["bondingScore", "engagementScore", "psychologicalAnalysis", "improvedPhrase"] } }
+                };
+                
+                let success = false; let attempt = 0; const maxRetries = 5;
+                while (attempt < maxRetries && !success) {
+                    try {
+                        const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                        if (!response.ok) throw new Error('Network error');
+                        const data = await response.json();
+                        const textResult = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (textResult) {
+                            const parsed = JSON.parse(textResult);
+                            document.getElementById('res-bonding').textContent = parsed.bondingScore;
+                            document.getElementById('bar-bonding').style.width = `${parsed.bondingScore * 10}%`;
+                            document.getElementById('res-engagement').textContent = parsed.engagementScore;
+                            document.getElementById('bar-engagement').style.width = `${parsed.engagementScore * 10}%`;
+                            document.getElementById('res-analysis').textContent = parsed.psychologicalAnalysis;
+                            document.getElementById('res-improved').textContent = `"${parsed.improvedPhrase}"`;
+                            resultBox.classList.remove('hidden'); success = true;
+                        } else { throw new Error('Invalid format'); }
+                    } catch (err) {
+                        attempt++;
+                        if (attempt >= maxRetries) { errorBox.textContent = "Error de conexión con la IA. Inténtalo más tarde."; errorBox.classList.remove('hidden'); } 
+                        else { await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt - 1))); }
+                    }
+                }
+                btnAnalyze.disabled = false;
+                document.getElementById('btn-icon').className = 'fa-solid fa-wand-magic-sparkles';
+                document.getElementById('btn-text').textContent = 'Evaluar con IA ✨';
+            });
+        });
+    </script>
+</div>
+</div>
