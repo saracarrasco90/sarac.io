@@ -20,10 +20,11 @@
                 SCM.
             </a>
             <div class="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-slate-300">
-                <a href="#sobre-mi" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+                <a href="#sobre-mi" class="hover:text-cyan-400 transition-colors">Inicio</a>
                 <a href="#pilares" class="hover:text-cyan-400 transition-colors">Enfoque</a>
                 <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Trayectoria</a>
-                <a href="#investigacion" class="hover:text-cyan-400 transition-colors">Investigación</a>
+                <a href="#mas-sobre-mi" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
+                <a href="#investigacion" class="hover:text-cyan-400 transition-colors">Papers</a>
                 <a href="#laboratorio" class="hover:text-cyan-400 transition-colors">Laboratorio</a>
             </div>
         </div>
@@ -170,44 +171,74 @@
         </div>
     </section>
 
-    <!-- Investigación Section -->
-    <section id="investigacion" class="py-24 relative bg-slate-900/30 border-y border-slate-800">
+    <!-- SECCIÓN NUEVA: Más sobre mí -->
+    <section id="mas-sobre-mi" class="py-24 bg-slate-800/20 border-t border-slate-800 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Un poco más sobre mí</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded mx-auto mb-10"></div>
+            
+            <div class="bg-slate-900/50 border border-slate-700 rounded-2xl p-8 md:p-12 shadow-xl shadow-black/20">
+                <i class="fa-solid fa-quote-left text-4xl text-slate-700 mb-6"></i>
+                <p class="text-slate-300 leading-relaxed text-lg md:text-xl">
+                    [Hola Sara, este es el espacio que me pediste. Aquí podemos escribir sobre lo que te apasiona fuera del laboratorio, tu filosofía de trabajo, qué te motiva a investigar, o cualquier dato personal que quieras destacar para darle un toque más humano a tu portfolio. Cuando sepas qué poner, ¡solo dímelo y lo rellenamos!]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investigación Section (Papers) -->
+    <section id="investigacion" class="py-24 relative border-t border-slate-800 bg-slate-900/30">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
                 <div>
-                    <h2 class="text-3xl font-bold text-white mb-3">Publicaciones & Investigación</h2>
-                    <p class="text-slate-400">Selección de mis trabajos recientes en congresos y revistas.</p>
+                    <h2 class="text-3xl font-bold text-white mb-3">Papers & Investigación</h2>
+                    <p class="text-slate-400">Selección de mis publicaciones científicas y asistencia a congresos.</p>
                 </div>
-                <a href="https://orcid.org" target="_blank" class="hidden md:flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Ver ORCID <i class="fa-solid fa-arrow-right"></i>
+                <!-- Enlace actualizado a tu GitHub Pages/ORCID -->
+                <a href="https://saracarrasco90.github.io/sarac.io/" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-cyan-400 hover:text-cyan-300 hover:bg-slate-700 transition-all">
+                    Ver mi web completa <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Paper 1 -->
-                <div class="bg-[#0B1120] border border-slate-700 hover:border-cyan-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- PAPER 1 -->
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-cyan-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full shadow-lg">
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Paper en Revista</span>
-                        <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2024</span>
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Paper Revista</span>
+                        <span class="text-slate-500 text-sm">2024</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Aplicación de estrategias psicológicas y sociales para incrementar el vínculo en interacción humano-robot</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Propuesta para aplicar estrategias relacionadas con la psicología social y la teoría de juegos para desarrollar robots con alto grado de vinculación, produciendo tiempos de interacción más largos.</p>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors leading-snug">Aplicación de estrategias psicológicas y sociales para incrementar el vínculo en interacción humano-robot</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Propuesta para aplicar estrategias relacionadas con la psicología social y la teoría de juegos para desarrollar robots con alto grado de vinculación.</p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-slate-800">
                         <div class="text-xs text-slate-500 font-medium">RIAI Vol. 21(4)</div>
-                        <a href="https://polipapers.upv.es/index.php/RIAI/article/view/18739" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-cyan-500 hover:text-white transition-colors"><i class="fa-solid fa-external-link-alt"></i></a>
+                        <a href="https://polipapers.upv.es/index.php/RIAI/article/view/18739" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
-                <!-- Paper 2 -->
-                <div class="bg-[#0B1120] border border-slate-700 hover:border-purple-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full">
+                <!-- PAPER 2 -->
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-purple-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full shadow-lg">
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">Congreso / Jornada</span>
-                        <span class="text-slate-500 text-sm"><i class="fa-regular fa-calendar mr-1"></i> 2022</span>
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">Congreso</span>
+                        <span class="text-slate-500 text-sm">2022</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Sistema de aprendizaje cooperativo para el robot social Mini</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Propuesta y desarrollo de una arquitectura de aprendizaje interactivo para mejorar la adaptabilidad del robot en tareas de asistencia domiciliaria y evaluación de escenarios de convivencia.</p>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-purple-300 transition-colors leading-snug">Sistema de aprendizaje cooperativo para el robot social Mini</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Desarrollo de una arquitectura de aprendizaje interactivo para mejorar la adaptabilidad del robot en escenarios de asistencia domiciliaria.</p>
                     <div class="flex justify-between items-center mt-auto pt-4 border-t border-slate-800">
-                        <div class="text-xs text-slate-500 font-medium">Jornadas Nacionales de Robótica</div>
+                        <div class="text-xs text-slate-500 font-medium">Jornadas Nac. Robótica</div>
+                    </div>
+                </div>
+                
+                <!-- PAPER 3 (Placeholder listo para que metas otro) -->
+                <div class="bg-[#0B1120] border border-slate-700 hover:border-pink-500/50 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full shadow-lg">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-semibold rounded-full border border-pink-500/20">Paper / Congreso</span>
+                        <span class="text-slate-500 text-sm">Año</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-pink-300 transition-colors leading-snug">Título de tu próxima publicación o paper a destacar</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">Breve resumen del contenido del artículo, metodología utilizada o impacto de la investigación en el campo de la robótica social.</p>
+                    <div class="flex justify-between items-center mt-auto pt-4 border-t border-slate-800">
+                        <div class="text-xs text-slate-500 font-medium">Revista / Evento</div>
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-pink-400 transition-colors"><i class="fa-solid fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -215,7 +246,7 @@
     </section>
 
     <!-- Laboratorio / Playground Section -->
-    <section id="laboratorio" class="py-24 relative">
+    <section id="laboratorio" class="py-24 relative border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">Laboratorio Interactivo</h2>
@@ -225,10 +256,10 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- App Card 1 -->
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1">
+                <!-- App Card 1: Tamagotchi -->
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 flex flex-col h-full opacity-80 cursor-default">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fa-solid fa-gamepad text-2xl"></i>
                         </div>
                         <span class="text-xs font-semibold px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
@@ -243,14 +274,14 @@
                     </div>
                 </div>
 
-                <!-- App Card 2 -->
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 group flex flex-col h-full hover:bg-slate-800 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 cursor-not-allowed">
+                <!-- App Card 2: Analizador Engagement (AHORA EN DESARROLLO) -->
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 flex flex-col h-full opacity-80 cursor-default">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-purple-400 group-hover:text-purple-300 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-cyan-400">
                             <i class="fa-solid fa-message text-2xl"></i>
                         </div>
-                        <span class="text-xs font-semibold px-3 py-1 bg-green-500/20 text-green-300 rounded-full border border-green-500/30">
-                            Activo
+                        <span class="text-xs font-semibold px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
+                            En desarrollo
                         </span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Analizador de Engagement ✨</h3>
@@ -284,7 +315,6 @@
             <div class="flex gap-4">
                 <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <!-- Correo electrónico correcto -->
                 <a href="mailto:sacarras@ing.uc3m.es" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
